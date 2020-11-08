@@ -4,7 +4,7 @@
 [ext_resource path="res://truenorg.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://Script/ItemContainer.gd" type="Script" id=3]
 
-[sub_resource type="StyleBoxTexture" id=2]
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
 region_rect = Rect2( 814.995, 143.294, 289.53, 98.0468 )
 margin_left = 17.6164
@@ -12,7 +12,7 @@ margin_right = 17.2929
 margin_top = 18.4091
 margin_bottom = 20.7709
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 24
 use_mipmaps = true
 use_filter = true
@@ -24,6 +24,7 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+corner_detail = 9
 expand_margin_left = 8.0
 expand_margin_right = 8.0
 
@@ -39,10 +40,10 @@ __meta__ = {
 }
 
 [node name="NinePatchRect" type="Panel" parent="."]
-margin_right = 597.0
+margin_right = 596.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
 anchor_right = 1.0
@@ -57,7 +58,7 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer"]
-margin_right = 573.0
+margin_right = 572.0
 margin_bottom = 30.0
 grow_horizontal = 0
 size_flags_vertical = 3
@@ -66,7 +67,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer"]
 margin_right = 99.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 1
@@ -75,10 +76,10 @@ valign = 3
 
 [node name="Label2" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer"]
 margin_left = 103.0
-margin_right = 494.0
+margin_right = 493.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 1
@@ -87,11 +88,11 @@ align = 1
 valign = 3
 
 [node name="Label3" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer"]
-margin_left = 498.0
-margin_right = 573.0
+margin_left = 497.0
+margin_right = 572.0
 margin_bottom = 30.0
 custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 1

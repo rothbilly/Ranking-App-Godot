@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Ranking App"
+run/main_scene="res://Scene/FranoControl.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -27,6 +28,7 @@ ParseDataArray="*res://Script/ParseDataArray.gd"
 window/size/width=1920
 window/size/height=1080
 window/size/fullscreen=true
+window/dpi/allow_hidpi=true
 
 [rendering]
 
