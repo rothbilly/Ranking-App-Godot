@@ -1,11 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scene/ItemContainer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Background.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Background.png" type="Texture" id=2]
 [ext_resource path="res://Scene/ColContainer.gd" type="Script" id=3]
 [ext_resource path="res://Scene/EmptyContainer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Styles/TruenoFont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Sprites/2K Lightweight.png" type="Texture" id=6]
 
 [sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="Theme" id=2]
+default_font = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 6 )
+region_rect = Rect2( 1126, 23, 147, 148 )
+margin_left = 12.0
+margin_right = 12.0
+margin_top = 12.0
+margin_bottom = 12.0
+modulate_color = Color( 1, 0.779297, 0, 1 )
 
 [node name="MainControl" type="Control"]
 anchor_right = 1.0
@@ -28,7 +42,7 @@ anchor_bottom = 1.0
 margin_left = 32.2449
 margin_top = 30.0
 margin_right = -27.7551
-margin_bottom = -30.0
+margin_bottom = -120.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -37,7 +51,7 @@ __meta__ = {
 self_modulate = Color( 1, 1, 1, 0.360784 )
 material = SubResource( 1 )
 margin_right = 1860.0
-margin_bottom = 1020.0
+margin_bottom = 930.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
 anchor_right = 1.0
@@ -52,27 +66,97 @@ __meta__ = {
 
 [node name="ColContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
 margin_right = 1800.0
-margin_bottom = 960.0
+margin_bottom = 870.0
 script = ExtResource( 3 )
 ItemContainer = ExtResource( 1 )
 EmptyContainer = ExtResource( 4 )
 
 [node name="Col1" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/ColContainer"]
 margin_right = 597.0
-margin_bottom = 960.0
+margin_bottom = 870.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Col2" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/ColContainer"]
 margin_left = 601.0
 margin_right = 1198.0
-margin_bottom = 960.0
+margin_bottom = 870.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Col3" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/ColContainer"]
 margin_left = 1202.0
 margin_right = 1800.0
-margin_bottom = 960.0
+margin_bottom = 870.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="ButtonContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = 980.0
+margin_right = -28.0
+margin_bottom = -30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="ButtonContainer"]
+self_modulate = Color( 1, 1, 1, 0.360784 )
+material = SubResource( 1 )
+margin_right = 1860.0
+margin_bottom = 70.0
+
+[node name="MarginContainer" type="MarginContainer" parent="ButtonContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColContainer" type="HBoxContainer" parent="ButtonContainer/Panel/MarginContainer"]
+margin_right = 1850.0
+margin_bottom = 60.0
+custom_constants/separation = 8
+alignment = 2
+
+[node name="Button" type="Button" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
+margin_left = 1490.0
+margin_top = 3.0
+margin_right = 1608.0
+margin_bottom = 57.0
+size_flags_vertical = 6
+theme = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " Import "
+
+[node name="Button2" type="Button" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
+margin_left = 1616.0
+margin_top = 3.0
+margin_right = 1701.0
+margin_bottom = 57.0
+size_flags_vertical = 6
+theme = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Clear"
+
+[node name="Button3" type="Button" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
+margin_left = 1709.0
+margin_top = 3.0
+margin_right = 1850.0
+margin_bottom = 57.0
+size_flags_vertical = 6
+theme = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SnapShot"

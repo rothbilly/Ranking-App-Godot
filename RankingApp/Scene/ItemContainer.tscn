@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://2K Lightweight.png" type="Texture" id=1]
-[ext_resource path="res://truenorg.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/2K Lightweight.png" type="Texture" id=1]
+[ext_resource path="res://Styles/TruenoFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Script/ItemContainer.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxTexture" id=1]
@@ -11,12 +11,6 @@ margin_left = 17.6164
 margin_right = 17.2929
 margin_top = 18.4091
 margin_bottom = 20.7709
-
-[sub_resource type="DynamicFont" id=2]
-size = 24
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 0.14902 )
@@ -67,7 +61,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer"]
 margin_right = 99.0
 margin_bottom = 30.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 1
@@ -79,7 +73,7 @@ margin_left = 103.0
 margin_right = 493.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 1
@@ -92,7 +86,7 @@ margin_left = 497.0
 margin_right = 572.0
 margin_bottom = 30.0
 custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 1

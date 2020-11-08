@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Ranking App"
 run/main_scene="res://Scene/FranoControl.tscn"
-config/icon="res://icon.png"
+config/icon="res://Sprites/icon.png"
 
 [autoload]
 
@@ -32,4 +32,4 @@ window/dpi/allow_hidpi=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Styles/default_env.tres"

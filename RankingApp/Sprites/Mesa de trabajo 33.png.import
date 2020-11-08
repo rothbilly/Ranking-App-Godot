@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/Mesa de trabajo 33.png-de217b431a1fc4af10c46f03b488d9bb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://Sprites/Mesa de trabajo 33.png"
+dest_files=[ "res://.import/Mesa de trabajo 33.png-de217b431a1fc4af10c46f03b488d9bb.stex" ]
 
 [params]
 

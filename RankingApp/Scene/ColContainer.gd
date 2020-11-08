@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-const MAX_ELEMENT_COLUMN = 17
+const MAX_ELEMENT_COLUMN = 15
 
 export(Resource) var ItemContainer
 export(Resource) var EmptyContainer
