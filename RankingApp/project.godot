@@ -18,10 +18,15 @@ _global_script_class_icons={
 config/name="Ranking App"
 config/icon="res://icon.png"
 
+[autoload]
+
+ParseDataArray="*res://Script/ParseDataArray.gd"
+
 [display]
 
 window/size/width=1920
 window/size/height=1080
+window/size/fullscreen=true
 
 [rendering]
 
