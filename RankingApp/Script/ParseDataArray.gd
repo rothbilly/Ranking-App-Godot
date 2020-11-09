@@ -1,6 +1,8 @@
 extends Control
 
 var path = "res://Data/Ranking.csv"
+var file_id = "18i-S0R2SfzNb9rCH_8d71BcFXxQJ4L9lPkYID-rR43Q"
+
 var _main_data
 
 func _ready():
@@ -10,6 +12,7 @@ func _ready():
 func Get_data():
 	var _mainData = [] ##array vacía
 	var file = File.new()
+	
 	file.open(path, file.READ)
 	
 	while !file.eof_reached(): # recorre cada fila
@@ -23,4 +26,4 @@ func Get_data():
 
 func Clear_Data():
 	_main_data.clear()
-	print(_main_data)
+	

@@ -11,7 +11,6 @@ func _ready():
 
 func ClearItems():
 	var chilitems = $Col1.get_children() + $Col2.get_children() + $Col3.get_children()
-	print(chilitems)
 	if chilitems != null:
 		for item in chilitems:
 			item.queue_free()

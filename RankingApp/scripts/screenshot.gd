@@ -68,3 +68,8 @@ func set_shortcut_action(action):
 func set_output_path(path):
 	_check_path(path)
 	output_path = path
+	
+
+func _on_Button3_pressed():
+	make_screenshot()
+	pass # Replace with function body.

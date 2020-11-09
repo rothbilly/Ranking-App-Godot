@@ -13,16 +13,16 @@
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 size = 32
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 9 )
 
-[sub_resource type="Theme" id=2]
+[sub_resource type="Theme" id=3]
 default_font = ExtResource( 5 )
 
-[sub_resource type="StyleBoxTexture" id=3]
+[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 6 )
 region_rect = Rect2( 1126, 23, 147, 148 )
 margin_left = 12.0
@@ -31,13 +31,13 @@ margin_top = 12.0
 margin_bottom = 12.0
 modulate_color = Color( 1, 0.779297, 0, 1 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 8 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
-atlas = SubResource( 4 )
+atlas = SubResource( 5 )
 region = Rect2( 413, 249, 65, 66 )
 
 [node name="MainControl" type="Control"]
@@ -150,14 +150,13 @@ alignment = 2
 script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
-margin_left = 15.0
 margin_top = 10.0
 margin_right = 1344.0
 margin_bottom = 50.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "Fecha actualizacion"
 
 [node name="Button" type="Button" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
@@ -166,8 +165,8 @@ margin_top = 3.0
 margin_right = 1470.0
 margin_bottom = 57.0
 size_flags_vertical = 6
-theme = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+theme = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = " Import "
@@ -178,8 +177,8 @@ margin_top = 3.0
 margin_right = 1563.0
 margin_bottom = 57.0
 size_flags_vertical = 6
-theme = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+theme = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Clear"
@@ -190,8 +189,8 @@ margin_top = 3.0
 margin_right = 1729.0
 margin_bottom = 57.0
 size_flags_vertical = 6
-theme = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+theme = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Screenshot"
@@ -202,16 +201,20 @@ margin_top = 3.0
 margin_right = 1850.0
 margin_bottom = 57.0
 size_flags_vertical = 6
-theme = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+theme = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Refresh"
-icon = SubResource( 5 )
+icon = SubResource( 6 )
 expand_icon = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
+download_file = "res://Data/Ranking.csv"
 [connection signal="clear" from="ButtonContainer/Panel/MarginContainer/ColContainer" to="MarginContainer/Panel/MarginContainer/ColContainer" method="_on_ColContainer_clear"]
 [connection signal="refresh" from="ButtonContainer/Panel/MarginContainer/ColContainer" to="MarginContainer/Panel/MarginContainer/ColContainer" method="_on_ColContainer_refresh"]
 [connection signal="pressed" from="ButtonContainer/Panel/MarginContainer/ColContainer/Button" to="ButtonContainer/Panel/MarginContainer/ColContainer" method="_on_Button_pressed"]
 [connection signal="pressed" from="ButtonContainer/Panel/MarginContainer/ColContainer/Button2" to="ButtonContainer/Panel/MarginContainer/ColContainer" method="_on_Button2_pressed"]
-[connection signal="pressed" from="ButtonContainer/Panel/MarginContainer/ColContainer/Button3" to="ButtonContainer/Panel/MarginContainer/ColContainer" method="_on_Button3_pressed"]
+[connection signal="pressed" from="ButtonContainer/Panel/MarginContainer/ColContainer/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="ButtonContainer/Panel/MarginContainer/ColContainer/Button4" to="ButtonContainer/Panel/MarginContainer/ColContainer" method="_on_Button4_pressed"]
+[connection signal="request_completed" from="ButtonContainer/Panel/MarginContainer/ColContainer/HTTPRequest" to="ButtonContainer/Panel/MarginContainer/ColContainer" method="_on_HTTPRequest_request_completed"]
