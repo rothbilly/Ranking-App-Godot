@@ -6,6 +6,18 @@ export(Resource) var ItemContainer
 export(Resource) var EmptyContainer
 
 func _ready():
+	renderItems()
+	pass
+
+func ClearItems():
+	var chilitems = $Col1.get_children() + $Col2.get_children() + $Col3.get_children()
+	print(chilitems)
+	if chilitems != null:
+		for item in chilitems:
+			item.queue_free()
+	pass
+
+func renderItems():
 	var _i = 0
 	for data in ParseDataArray._main_data:
 		if _i < MAX_ELEMENT_COLUMN:
@@ -52,3 +64,15 @@ func _ready():
 				empty.data = []
 				$Col3.add_child(empty)
 			_i += 1
+	pass
+
+
+func _on_ColContainer_clear():
+	ClearItems()
+	pass # Replace with function body.
+
+
+func _on_ColContainer_refresh():
+	ClearItems()
+	renderItems()
+	pass # Replace with function body.
