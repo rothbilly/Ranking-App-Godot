@@ -2,8 +2,8 @@
 
 use the .import file to import the proyect
 
-> ## Features Request
+> ## Feature Request
 > 
-> - Render data blocks in the item
-> - Convert CSV data to a dictionary of type "data[name] = {position, points}"
-> - A screenshot system by a button o key
+> -Bugfix, crashes when csv file is deleted
+> -Feature, show time (day, month) when file is imported
+> -Feature, show success or fail when the HTTP request finish
