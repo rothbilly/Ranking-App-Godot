@@ -166,9 +166,9 @@ margin_right = 1470.0
 margin_bottom = 57.0
 size_flags_vertical = 6
 theme = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/normal = SubResource( 4 )
 text = " Import "
 
 [node name="Button2" type="Button" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
@@ -178,9 +178,9 @@ margin_right = 1563.0
 margin_bottom = 57.0
 size_flags_vertical = 6
 theme = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/normal = SubResource( 4 )
 text = "Clear"
 
 [node name="Button3" type="Button" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
@@ -190,9 +190,9 @@ margin_right = 1729.0
 margin_bottom = 57.0
 size_flags_vertical = 6
 theme = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/normal = SubResource( 4 )
 text = "Screenshot"
 
 [node name="Button4" type="Button" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
@@ -202,15 +202,16 @@ margin_right = 1850.0
 margin_bottom = 57.0
 size_flags_vertical = 6
 theme = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/normal = SubResource( 4 )
 text = "Refresh"
 icon = SubResource( 6 )
 expand_icon = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="ButtonContainer/Panel/MarginContainer/ColContainer"]
 download_file = "res://Data/Ranking.csv"
+
 [connection signal="clear" from="ButtonContainer/Panel/MarginContainer/ColContainer" to="MarginContainer/Panel/MarginContainer/ColContainer" method="_on_ColContainer_clear"]
 [connection signal="refresh" from="ButtonContainer/Panel/MarginContainer/ColContainer" to="MarginContainer/Panel/MarginContainer/ColContainer" method="_on_ColContainer_refresh"]
 [connection signal="pressed" from="ButtonContainer/Panel/MarginContainer/ColContainer/Button" to="ButtonContainer/Panel/MarginContainer/ColContainer" method="_on_Button_pressed"]
